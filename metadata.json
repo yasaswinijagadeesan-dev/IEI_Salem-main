@@ -1,0 +1,8 @@
+{
+  "name": "IEI Salem Local Centre Official Website",
+  "description": "An institutional-grade platform for The Institution of Engineers (India), Salem Local Centre, featuring event management, committee directories, membership details, and a professional gallery.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

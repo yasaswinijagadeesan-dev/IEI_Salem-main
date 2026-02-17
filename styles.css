@@ -1,0 +1,319 @@
+/* Custom Animations */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Partners Auto Scroll */
+.animate-scroll-partners {
+    display: flex;
+    width: max-content;
+    animation: scrollPartners 30s linear infinite;
+}
+
+.animate-scroll-partners:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollPartners {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* About Page Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-scale {
+    animation: fadeInScale 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Hero Section Animated Buttons */
+.hero-btn {
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.1em;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 2.6em;
+    padding-right: 3em;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.hero-btn-primary {
+    background: #003366;
+    color: white;
+    box-shadow: inset 0 0 1.6em -0.6em #001a33;
+}
+
+.hero-btn-secondary {
+    background: #1e90ff;
+    color: white;
+    box-shadow: inset 0 0 1.6em -0.6em #0066cc;
+}
+
+.hero-btn .icon {
+    background: white;
+    margin-left: 0.9em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+    border-radius: 3px;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.hero-btn-primary .icon {
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #001a33;
+}
+
+.hero-btn-secondary .icon {
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #0066cc;
+}
+
+.hero-btn:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.hero-btn .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+}
+
+.hero-btn-primary .icon svg {
+    color: #003366;
+}
+
+.hero-btn-secondary .icon svg {
+    color: #1e90ff;
+}
+
+.hero-btn:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.hero-btn:active .icon {
+    transform: scale(0.95);
+}
+
+/* Skewed Slide Button Style */
+.skew-btn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #003366;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.skew-btn::before,
+.skew-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all 0.15s ease;
+}
+
+.skew-btn::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+.skew-btn::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+.skew-btn:active,
+.skew-btn:focus {
+    outline: none;
+}
+
+.skew-btn:active::before,
+.skew-btn:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+.skew-btn:active::before {
+    top: 3px;
+}
+
+.skew-btn:active::after {
+    bottom: 3px;
+}
+
+.skew-btn_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #003366;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.skew-btn_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #003366;
+}
+
+.skew-btn_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #003366;
+    transition: all 0.2s ease;
+}
+
+.skew-btn_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: #ffffff;
+    transform: skew(-15deg);
+    transition: all 0.2s ease;
+}
+
+.skew-btn_text {
+    position: relative;
+}
+
+.skew-btn:hover {
+    color: #003366;
+}
+
+.skew-btn:hover .skew-btn_text {
+    color: #003366;
+}
+
+.skew-btn:hover .skew-btn_sl {
+    width: calc(100% + 15px);
+}
+
+.skew-btn:hover .skew-btn_lg::after {
+    background-color: #fff;
+}
